@@ -1,0 +1,2 @@
+jwt:
+  secret: 0chotona-secret-key-for-jwt-123456789
