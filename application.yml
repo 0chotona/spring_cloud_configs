@@ -20,7 +20,7 @@ spring:
         password: ejhdl!!9779
   
     jpa:
-        database: mariadb
+        database: mysql
         database-platform: org.hibernate.dialect.MariaDBDialect
         hibernate: 
         # create, create-drop, update, none
