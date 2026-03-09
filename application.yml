@@ -20,15 +20,14 @@ spring:
         password: ejhdl!!9779
   
     jpa:
+        database: mariadb
+        database-platform: org.hibernate.dialect.MariaDBDialect
         hibernate: 
         # create, create-drop, update, none
             ddl-auto: create
         # 콘솔출력
         show-sql: true     
-        properties:
-            hibernate:
-                dialect: org.hibernate.dialect.MariaDBDialect
-                format_sql: true
+        
     data:
         redis:
             host: localhost
