@@ -4,3 +4,16 @@ spring:
     consumer: 
       group-id: order-group
       auto-offset-reset: earliest
+
+# Feign + CircuitBreaker 활성화
+feign:
+  circuitbreaker:
+    enabled: true
+
+# Feign + CircuitBreaker 트랜잭션 처리
+resilience4j:
+  circuitbreaker:
+    instances:
+      productService:
+        failure-rate-threshold: 40 # 실패율 40 이상이면 서킷브레이커 발동시키라는 뜻 
+        wait-duration-in-open-state: 10s # 10초 동안 productService에 대한 작업이 막힌다는 뜻
